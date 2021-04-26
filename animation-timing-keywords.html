@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation timing keywords</title>
+    <!-- <link
+      rel="stylesheet"
+      href="animation-timing-keywords.css"
+      type="text/css"
+    /> -->
+    <style>
+        body {
+    background-color: rgb(221, 233, 233);
+    text-align: center;
+}
+img {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 0px;
+}
+#linear {
+    animation: linear 10s linear infinite;
+}
+#ease {
+    top: 150px;
+    animation: ease-in-out 10s linear infinite;
+}
+@keyframes linear {
+    50% {
+        left: calc(100% - 100px);
+        /* transform: rotate(1080deg); */
+        transform: rotate(360deg);
+    }
+    100% {
+        left:0px;
+    }
+}
+@keyframes ease-in-out {
+    50% {
+        left: calc(100% - 100px);
+        /* transform: rotate(1080deg) */
+        transform: rotate(360deg);
+    }
+    100% {
+        left:0px;
+    }
+}
+    </style>
+  </head>
+  <body>
+    <!-- <h1>Animation timing keywords</h1>
+    <h2>Linear and ease</h2>
+
+    <p>
+      There are a number of predefined keywords available for popular options.
+      For example, the default value is ease, which starts slow, speeds up in
+      the middle, and then slows down again in the end. Other options include
+      ease-out, which is quick in the beginning then slows down, ease-in, which
+      is slow in the beginning, then speeds up at the end, or linear, which
+      applies a constant animation speed throughout.
+    </p> -->
+    <img id="linear" src="car-wheel.png" alt="car wheel" />
+    <img id="ease" src="car-wheel.png" alt="car wheel">
+  </body>
+</html>
